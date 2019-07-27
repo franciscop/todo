@@ -9,7 +9,7 @@ import AddItem from "./AddItem";
 import Persist from "./Persist";
 
 export default () => (
-  <Store items={local.items || []}>
+  <Store items={[]}>
     <GlobalStyle />
     <Persist />
     <Main>

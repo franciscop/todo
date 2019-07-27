@@ -16,7 +16,6 @@ const Todo = ({ id, text, done }) => {
   const index = useSelector(state => state.items.findIndex(it => it.id === id));
   const { remove } = useActions("items");
   const { extend } = useActions(`items.${index}`);
-  if (index === -1) return null;
   return (
     <Item>
       <Label onClick={() => extend({ done: !done })}>
