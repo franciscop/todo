@@ -1,8 +1,8 @@
 # To Do List
 
-An example of how to do a simple todo list with React:
+An example of how to do a simple todo list with React (click for demo):
 
-![GIF showing how to use it](./public/todo-list.gif)
+[![GIF showing how to use it](./public/todo-list.gif)](https://francisco.io/todo)
 
 This is my latest startup! Just kidding, it's just a small personal project. I made this because:
 
