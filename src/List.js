@@ -30,6 +30,6 @@ const Todo = ({ index, text, done }) => {
 
 export default () => {
   const [items] = useStore("items");
-  if (!items.length) return <Paragraph>Add your first task:</Paragraph>;
+  if (!items.length) return null;
   return items.map((item, i) => <Todo key={i} index={i} {...item} />);
 };

@@ -14,7 +14,7 @@ const SendButton = () => (
 );
 
 export default () => {
-  const [_, { append }] = useStore("items");
+  const [items, { append }] = useStore("items");
   return (
     <Form
       onSubmit={forn(data => append(data), { reset: true })}
@@ -22,7 +22,7 @@ export default () => {
     >
       <Input
         name="text"
-        placeholder="Add new item"
+        placeholder={items.length ? "Add a new item" : "Add the first item"}
         required
         autoComplete="off"
       />
