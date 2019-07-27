@@ -20,6 +20,7 @@ export default () => {
       onSubmit={forn(data => append(data), { reset: true })}
       autoComplete="off"
     >
+      <Input type="hidden" name="id" value={items.length} />
       <Input
         name="text"
         placeholder={items.length ? "Add a new item" : "Add the first item"}

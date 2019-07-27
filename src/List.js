@@ -1,5 +1,5 @@
 import React from "react";
-import { useStore, useActions } from "statux";
+import { useStore, useSelector, useActions } from "statux";
 import { Trash } from "react-feather";
 
 import { Item, Label, Paragraph, Checkbox, Text, TrashIcon } from "./styled";
@@ -12,7 +12,8 @@ const Remove = ({ onClick }) => (
   </TrashIcon>
 );
 
-const Todo = ({ index, text, done }) => {
+const Todo = ({ id, text, done }) => {
+  const index = useSelector(state => state.items.findIndex(it => it.id === id));
   const { remove } = useActions("items");
   const { extend } = useActions(`items.${index}`);
   return (
@@ -31,5 +32,8 @@ const Todo = ({ index, text, done }) => {
 export default () => {
   const [items] = useStore("items");
   if (!items.length) return null;
-  return items.map((item, i) => <Todo key={i} index={i} {...item} />);
+  return items
+    .slice()
+    .sort((a, b) => (a.done === b.done ? 0 : a.done ? 1 : -1))
+    .map(item => <Todo key={item.id} {...item} />);
 };
