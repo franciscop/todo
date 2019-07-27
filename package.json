@@ -2,6 +2,7 @@
   "name": "plain",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://francisco.io/todo/",
   "dependencies": {
     "brownies": "^3.0.0",
     "forn": "^1.3.1",
