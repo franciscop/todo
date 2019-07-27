@@ -136,7 +136,6 @@ export const Checkbox = styled.div`
   background: rgba(0, 0, 0, 0.04);
   box-shadow: inset 2px 2px 10px -10px;
   position: relative;
-  transition: all 0.1s ease;
 
   &:after {
     content: "";
