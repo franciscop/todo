@@ -14,6 +14,7 @@ const Remove = ({ onClick }) => (
 
 const Todo = ({ id, text, done }) => {
   const index = useSelector(state => state.items.findIndex(it => it.id === id));
+  if (index === -1) return null;
   const { remove } = useActions("items");
   const { extend } = useActions(`items.${index}`);
   return (
