@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Store from "statux";
+import { local } from "brownies";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { GlobalStyle, Main, Title } from "./styled";
+import List from "./List";
+import AddItem from "./AddItem";
+import Persist from "./Persist";
 
-export default App;
+export default () => (
+  <Store items={local.items || []}>
+    <GlobalStyle />
+    <Persist />
+    <Main>
+      <Title>To Do</Title>
+      <List />
+      <AddItem />
+    </Main>
+  </Store>
+);
