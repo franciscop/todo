@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://francisco.io/todo/",
+  "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
+  "license": "MIT",
   "dependencies": {
     "brownies": "^3.0.0",
     "forn": "^1.3.1",
