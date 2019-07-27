@@ -26,12 +26,16 @@ export const GlobalStyle = createGlobalStyle`
 // Where the title, items, etc. are hosted
 export const Main = styled.div`
   background: #fff;
-  width: calc(100% - 20px);
   max-width: 600px;
-  margin: 60px auto;
-  border-radius: 6px;
   overflow: hidden;
   box-shadow: 2px 2px 6px -6px;
+  margin: 10px;
+  transition: all 0.2s ease;
+
+  @media (min-width: 620px) {
+    margin: 60px auto;
+    border-radius: 6px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -74,6 +78,7 @@ export const Box = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   transition: all 0.2s ease;
 `;
 
