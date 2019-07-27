@@ -38,9 +38,35 @@ export const Main = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Header = styled.header`
   margin: 0;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const Title = styled.h1`
   padding: 20px;
+  flex-grow: 1;
+  line-height: 30px;
+  margin: 0;
+`;
+
+export const Link = styled.a.attrs({
+  target: "_blank",
+  rel: "noopener noreferrer"
+})`
+  height: 70px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #1e71ff;
+    background: #deeaff;
+  }
 `;
 
 export const Item = styled.div`
@@ -155,7 +181,6 @@ export const SendIcon = styled(Box)`
   cursor: pointer;
   &:hover,
   &:focus {
-    color: white;
-    background: #1e71ff;
+    background: #deeaff;
   }
 `;
