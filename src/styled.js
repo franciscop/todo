@@ -63,7 +63,8 @@ export const Link = styled.a.attrs({
   align-items: center;
   transition: all 0.2s ease;
 
-  &:hover {
+  &:hover,
+  &:active {
     color: #1e71ff;
     background: #deeaff;
   }
