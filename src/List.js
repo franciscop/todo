@@ -32,8 +32,5 @@ const Todo = ({ id, text, done }) => {
 export default () => {
   const [items] = useStore("items");
   if (!items.length) return null;
-  return items
-    .slice()
-    .sort((a, b) => (a.done === b.done ? 0 : a.done ? 1 : -1))
-    .map(item => <Todo key={item.id} {...item} />);
+  return items.slice().map(item => <Todo key={item.id} {...item} />);
 };

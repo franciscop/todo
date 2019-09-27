@@ -74,6 +74,7 @@ export const Item = styled.div`
   justify-content: space-between;
   align-items: stretch;
   line-height: 24px;
+  transition: all 1s ease;
 
   border-top: 1px solid #eee;
 `;
