@@ -12,13 +12,14 @@ const Remove = ({ onClick }) => (
   </TrashIcon>
 );
 
-const Todo = ({ id, text, done }) => {
+const Todo = ({ id }) => {
   const index = useSelector(state => state.items.findIndex(it => it.id === id));
+  const [done, setDone] = useStore(`items.${index}.done`);
+  const text = useSelector(`items.${index}.text`);
   const { remove } = useActions("items");
-  const { extend } = useActions(`items.${index}`);
   return (
     <Item>
-      <Label onClick={() => extend({ done: !done })}>
+      <Label onClick={() => setDone(!done)}>
         <Paragraph>
           <Check checked={done} />
           <Text>{text}</Text>
@@ -32,5 +33,5 @@ const Todo = ({ id, text, done }) => {
 export default () => {
   const [items] = useStore("items");
   if (!items.length) return null;
-  return items.slice().map(item => <Todo key={item.id} {...item} />);
+  return items.map(item => <Todo key={item.id} id={item.id} />);
 };
