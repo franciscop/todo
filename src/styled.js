@@ -138,17 +138,20 @@ export const Checkbox = styled.div`
   background: rgba(0, 0, 0, 0.04);
   box-shadow: inset 2px 2px 10px -10px;
   position: relative;
+  transition: all 0.2s ease;
 
   &:after {
     content: "";
     position: absolute;
-    display: none;
+    display: block;
     left: 6px;
     top: 2px;
     width: 5px;
     height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
+    opacity: 0;
+    transition: all 0.2s ease;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -159,7 +162,7 @@ export const Checkbox = styled.div`
     `
     background: #1e71ff;
     &:after {
-      display: block;
+      opacity: 1;
     }
   `}
 `;
