@@ -55,7 +55,7 @@ export const Title = styled.h1`
 
 export const Link = styled.a.attrs({
   target: "_blank",
-  rel: "noopener noreferrer"
+  rel: "noopener noreferrer",
 })`
   height: 70px;
   padding: 20px;
@@ -80,8 +80,6 @@ export const Item = styled.div`
   border-top: 1px solid #eee;
 `;
 
-export const Form = styled(Item).attrs({ as: "form" })``;
-
 export const Input = styled.input`
   padding: 20px 0 20px 20px;
   height: 60px;
@@ -89,6 +87,7 @@ export const Input = styled.input`
   font-size: 18px;
   border: none;
   width: calc(100% - 60px);
+  outline: none;
 `;
 
 export const Button = styled.button`

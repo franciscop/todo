@@ -7,12 +7,12 @@
   "license": "MIT",
   "dependencies": {
     "brownies": "^3.0.0",
-    "forn": "^1.3.1",
+    "form-mate": "^1.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-feather": "^2.0.3",
-    "react-scripts": "3.0.1",
-    "statux": "^1.0.3",
+    "react-scripts": "^3.4.3",
+    "statux": "^1.1.10",
     "styled-components": "^4.3.2"
   },
   "scripts": {
