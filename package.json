@@ -12,7 +12,7 @@
     "react-dom": "^16.8.6",
     "react-feather": "^2.0.3",
     "react-scripts": "^3.4.3",
-    "statux": "^1.1.10",
+    "statux": "^1.1.13",
     "styled-components": "^4.3.2"
   },
   "scripts": {

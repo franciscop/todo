@@ -14,10 +14,11 @@ const SendButton = () => (
 
 export default () => {
   const [items, { append }] = useStore("items");
+  const newId = Math.max(0, ...items.map(it => it.id)) + 1;
   return (
     <Form onSubmit={append} autoComplete="off" autoReset>
       <Item>
-        <Input type="hidden" name="id" value={items.length} />
+        <Input type="hidden" name="id" value={newId} />
         <Input
           name="text"
           placeholder={items.length ? "Add a new item" : "Add the first item"}
