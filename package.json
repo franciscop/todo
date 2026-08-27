@@ -16,7 +16,7 @@
     "test": "bun test"
   },
   "dependencies": {
-    "brownies": "^3.0.0",
+    "brownies": "^4.0.1",
     "form-mate": "^4.2.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
+    "@types/react-dom": "^19.2.5",
     "@vitejs/plugin-react": "^6.1.0",
     "typescript": "^7.0.2",
     "vite": "^8.2.2"
