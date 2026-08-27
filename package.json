@@ -12,7 +12,8 @@
     "start": "vite preview",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "bunx tsc"
+    "lint": "bunx tsc",
+    "test": "bun test"
   },
   "dependencies": {
     "brownies": "^3.0.0",
