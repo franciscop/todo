@@ -1,8 +1,9 @@
-import React from "react";
 import { useStore, useSelector, useActions } from "statux";
 import { Trash } from "react-feather";
 
 import { Item, Label, Paragraph, Checkbox, Text, TrashIcon } from "./styled";
+
+type TodoItem = { id: number; text: string; done?: boolean };
 
 const Check = ({ checked }) => <Checkbox checked={checked} />;
 
@@ -13,10 +14,12 @@ const Remove = ({ onClick }) => (
 );
 
 const Todo = ({ id }) => {
-  const index = useSelector(state => state.items.findIndex(it => it.id === id));
+  const index = useSelector((state) =>
+    state.items.findIndex((it) => it.id === id)
+  );
   const [done, setDone] = useStore(`items.${index}.done`);
   const text = useSelector(`items.${index}.text`);
-  const { remove } = useActions("items");
+  const { remove } = useActions<TodoItem[]>("items");
   return (
     <Item>
       <Label onClick={() => setDone(!done)}>
@@ -33,5 +36,11 @@ const Todo = ({ id }) => {
 export default () => {
   const [items] = useStore("items");
   if (!items.length) return null;
-  return items.map(item => <Todo key={item.id} id={item.id} />);
+  return (
+    <>
+      {items.map((item) => (
+        <Todo key={item.id} id={item.id} />
+      ))}
+    </>
+  );
 };

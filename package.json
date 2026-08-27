@@ -1,38 +1,33 @@
 {
-  "name": "plain",
+  "name": "todo",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://francisco.io/todo/",
   "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
   "license": "MIT",
+  "main": "src/main.tsx",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite preview",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "bunx tsc"
+  },
   "dependencies": {
     "brownies": "^3.0.0",
-    "form-mate": "^1.1.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-feather": "^2.0.3",
-    "react-scripts": "^3.4.3",
-    "statux": "^1.1.13",
-    "styled-components": "^4.3.2"
+    "form-mate": "^4.2.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-feather": "^2.0.10",
+    "statux": "^2.0.1",
+    "styled-components": "^6.5.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf ./docs && mv ./build ./docs",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
   }
 }

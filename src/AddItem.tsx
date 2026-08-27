@@ -1,9 +1,10 @@
-import React from "react";
 import { useStore } from "statux";
 import Form from "form-mate";
 import { Send } from "react-feather";
 
 import { Input, Item, SendIcon } from "./styled";
+
+type TodoItem = { id: number; text: string; done?: boolean };
 
 // A button to send the information
 const SendButton = () => (
@@ -13,8 +14,8 @@ const SendButton = () => (
 );
 
 export default () => {
-  const [items, { append }] = useStore("items");
-  const newId = Math.max(0, ...items.map(it => it.id)) + 1;
+  const [items, { append }] = useStore<TodoItem[]>("items");
+  const newId = Math.max(0, ...items.map((it) => it.id)) + 1;
   return (
     <Form onSubmit={append} autoComplete="off" autoReset>
       <Item>

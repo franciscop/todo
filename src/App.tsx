@@ -1,4 +1,3 @@
-import React from "react";
 import Store from "statux";
 import { local } from "brownies";
 import { Code } from "react-feather";

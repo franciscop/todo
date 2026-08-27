@@ -129,7 +129,7 @@ export const Label = styled(Button)`
   }
 `;
 
-export const Checkbox = styled.div`
+export const Checkbox = styled.div<{ checked?: boolean }>`
   width: 20px;
   height: 20px;
   flex-shrink: 0;
