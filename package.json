@@ -2,19 +2,20 @@
   "name": "todo",
   "version": "1.0.0",
   "private": true,
+  "description": "A small to-do list built with React, persisted to local storage.",
   "homepage": "https://francisco.io/todo/",
   "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
   "license": "MIT",
-  "main": "src/main.tsx",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "start": "vite preview",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "bunx tsc",
-    "test": "bun test"
+    "test": "bun test",
+    "lint": "bunx tsc"
   },
+  "main": "src/main.tsx",
+  "type": "module",
   "dependencies": {
     "brownies": "^4.0.1",
     "form-mate": "^4.2.1",
