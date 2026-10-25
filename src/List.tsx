@@ -1,5 +1,5 @@
 import { useStore, useSelector, useActions } from "statux";
-import { Trash } from "react-feather";
+import { Trash } from "lucide-react";
 
 import { Item, Label, Paragraph, Checkbox, Text, TrashIcon } from "./styled";
 

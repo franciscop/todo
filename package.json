@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "start": "vite preview",
+    "start": "bun run build && bun run preview",
     "build": "vite build",
     "preview": "vite preview",
     "test": "bun test",
@@ -16,12 +16,15 @@
   },
   "main": "src/main.tsx",
   "type": "module",
+  "engines": {
+    "bun": "^1.4"
+  },
   "dependencies": {
     "brownies": "^4.0.1",
     "form-mate": "^4.2.1",
+    "lucide-react": "^1.52.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "react-feather": "^2.0.10",
     "statux": "^2.0.1",
     "styled-components": "^6.5.3"
   },

@@ -1,6 +1,6 @@
 import { useStore } from "statux";
 import Form from "form-mate";
-import { Send } from "react-feather";
+import { Send } from "lucide-react";
 
 import { Input, Item, SendIcon } from "./styled";
 

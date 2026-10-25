@@ -70,6 +70,13 @@ export const Link = styled.a.attrs({
   }
 `;
 
+export const Footer = styled.footer`
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+  font-size: 13px;
+`;
+
 export const Item = styled.div`
   display: flex;
   justify-content: space-between;
