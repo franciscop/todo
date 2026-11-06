@@ -12,7 +12,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "bun test",
-    "lint": "bunx tsc"
+    "lint": "bunx prettier --write . && bunx tsc"
   },
   "main": "src/main.tsx",
   "type": "module",
